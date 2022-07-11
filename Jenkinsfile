@@ -1,12 +1,10 @@
-pipeline{
-    agent any
-    stages{
-          
-      stage('one') {
-          steps {
-              sh 'echo Hello World'
-          }
-          
+pipeline {
+    agent any 
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
         }
     }
 }
